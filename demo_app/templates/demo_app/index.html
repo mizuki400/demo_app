@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Hello Django</title>
-  </head>
-  <body>
-    <h1>Hello Django</h1>
-  </body>
-</html>
+{%extends 'demo_app/base.html'%}
+{% block content%}
+
+<h3>あなたは合格できるでしょうか？</h3>
+<form action="index.html" method="post">
+  <div class="row">
+    <div class="col s6">
+      <p>
+        <input type="submit" name="to_input" value="もちろん！ (入力フォームへ)">
+      </p>
+    </div>
+    <div class="col s6">
+      <p>
+        <input type="submit" name="no_conf" value="自信がありません、、">
+      </p>
+    </div>
+  </div>
+</form>
+{% endblock%}
